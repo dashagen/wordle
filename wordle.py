@@ -56,7 +56,7 @@ def print_guess():
 
 
 ### Load 5 letter words
-f = open("common_5_letter_words.txt")
+f = open("simple_5_letter_words.txt")
 word_list = [w.rstrip().upper() for w in f]
 
 ### pick a word
@@ -77,7 +77,7 @@ check_book  = [ ];
 while (guess != answer):
 
     # ask for input
-    guess = input(bcolors.GRAY + "Input your guess please! ").upper()
+    guess = input(bcolors.WHITE + "Input your guess please! ").upper()
 
     # tell the answer if asked
     if guess == "TELL ME":
