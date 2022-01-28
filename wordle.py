@@ -3,7 +3,6 @@ import random
 
 ### Terminal printing Colors
 class bcolors:
-    HEADER = '\033[95m'
     BLUE = '\033[94m'
     CYAN = '\033[96m'
     GREEN = '\033[92m'
@@ -11,6 +10,7 @@ class bcolors:
     DGRAY = '\033[90m'
     YELLOW = '\033[93m'
     WHITE = '\033[37m'
+    BLACK = '\033[30m'
     BOLD = '\033[1m'
     UNDERLINE = '\033[4m'
 
@@ -34,10 +34,11 @@ def keyboard():
     print()
 
 
-### Function to print guess
+### Function to print guesses
 def print_guess():
 
     for i in range(len(guess_book)):
+
         chk = check_book[i]
         gus = guess_book[i]
 
@@ -55,7 +56,7 @@ def print_guess():
 
 
 ### Load 5 letter words
-f = open("5_letter_words.txt")
+f = open("common_5_letter_words.txt")
 word_list = [w.rstrip().upper() for w in f]
 
 ### pick a word
