@@ -1,5 +1,6 @@
 #!/usr/bin/python
 import random
+import os
 
 ### Terminal printing Colors
 class bcolors:
@@ -60,7 +61,7 @@ def print_guess():
 
 
 ### Load 5 letter words
-f = open("simple_5_letter_words.txt")
+f = open(os.path.expanduser('~') + "/Documents/dictionaries/simple_5_letter_words.txt")
 word_list = [w.rstrip().upper() for w in f]
 
 ### pick a word
