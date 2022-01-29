@@ -29,7 +29,7 @@ def keyboard():
         elif (status[l] == 2):
             print(bcolors.YELLOW + l ,end=" ")
         elif (status[l] == 3):
-            print(bcolors.DGRAY + l ,end=" ")
+            print(bcolors.BLACK + l ,end=" ")
     print()
     print()
 
@@ -37,10 +37,14 @@ def keyboard():
 ### Function to print guesses
 def print_guess():
 
+    print()
+
     for i in range(len(guess_book)):
 
         chk = check_book[i]
         gus = guess_book[i]
+
+        print("   ", end=" ")
 
         for j in range(5):
             if (chk[j] == 0):
@@ -73,6 +77,7 @@ guess = ""
 guess_book  = [ ];
 check_book  = [ ];
 
+print()
 
 while (guess != answer):
 
