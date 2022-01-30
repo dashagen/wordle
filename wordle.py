@@ -130,7 +130,7 @@ while (guess_cnt <= N_GUESS):
 
     # if guessed then exit
     if guess == answer:
-        print(bcolors.CYAN + "   You Won!")
+        print(bcolors.CYAN + "     You Won!")
         break
 
 if guess != answer:
