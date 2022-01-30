@@ -73,17 +73,18 @@ status = dict(zip(alphabet, [0]*26))
 
 
 ### Guessing begins
-guess = ""
+N_GUESS = 6
 
-guess_book  = [ ];
-check_book  = [ ];
+guess_cnt   = 1
+guess_book  = [ ]
+check_book  = [ ]
 
 print()
 
-while (guess != answer):
+while (guess_cnt <= N_GUESS):
 
     # ask for input
-    guess = input(bcolors.WHITE + "Input your guess please! ").upper()
+    guess = input(bcolors.WHITE + "Input your guess please! (" +f'{guess_cnt}' + "/" + f'{N_GUESS}'+") " ).upper()
 
     # tell the answer if asked
     if guess == "TELL ME":
@@ -97,6 +98,9 @@ while (guess != answer):
     # ask again if not a word
     if guess not in word_list:
         continue
+
+    # guess count plus 1
+    guess_cnt = guess_cnt + 1
 
     # Check matching situations
     check = [0]*5
@@ -124,3 +128,10 @@ while (guess != answer):
     # Show keyboard
     keyboard()
 
+    # if guessed then exit
+    if guess == answer:
+        print(bcolors.CYAN + "   You Won!")
+        break
+
+if guess != answer:
+    print(bcolors.WHITE + "The ansewr is " + bcolors.GREEN + answer)
