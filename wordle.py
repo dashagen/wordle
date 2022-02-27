@@ -1,6 +1,7 @@
 #!/usr/bin/python
 import random
 import os
+import sys
 
 ### Terminal printing Colors
 class bcolors:
@@ -65,7 +66,10 @@ f = open(os.path.expanduser('~') + "/Documents/dictionaries/simple_5_letter_word
 word_list = [w.rstrip().upper() for w in f]
 
 ### pick a word
-answer = random.choice(word_list)
+if (len(sys.argv) > 1):
+    answer = sys.argv[1].upper()
+else:
+    answer = random.choice(word_list)
 
 ### Create status check
 alphabet = "QWERTYUIOPASDFGHJKLZXCVBNM";
@@ -135,3 +139,4 @@ while (guess_cnt <= N_GUESS):
 
 if guess != answer:
     print(bcolors.WHITE + "The ansewr is " + bcolors.GREEN + answer)
+
