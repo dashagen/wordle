@@ -6,7 +6,6 @@ abash
 abate
 abbey
 abbot
-abbé
 abeam
 abets
 abhor
@@ -577,7 +576,6 @@ caddy
 cadet
 cadge
 cadre
-café
 caged
 cages
 cagey
@@ -1544,7 +1542,6 @@ futon
 fuzed
 fuzes
 fuzzy
-fête
 gabby
 gable
 gaffe
@@ -3239,7 +3236,6 @@ round
 rouse
 route
 routs
-roué
 roved
 rover
 roves
