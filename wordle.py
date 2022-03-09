@@ -24,13 +24,13 @@ def keyboard():
         elif l == "Z":
             print("\n", end= "  ")
 
-        if (status[l] == 0):
+        if (letter_status[l] == 0):
             print(bcolors.WHITE + l ,end=" ")
-        elif (status[l] == 1):
+        elif (letter_status[l] == 1):
             print(bcolors.GREEN + l ,end=" ")
-        elif (status[l] == 2):
+        elif (letter_status[l] == 2):
             print(bcolors.YELLOW + l ,end=" ")
-        elif (status[l] == 3):
+        elif (letter_status[l] == 3):
             print(bcolors.BLACK + l ,end=" ")
     print()
     print()
@@ -71,9 +71,9 @@ if (len(sys.argv) > 1):
 else:
     answer = random.choice(word_list)
 
-### Create status check
+### Letter status
 alphabet = "QWERTYUIOPASDFGHJKLZXCVBNM";
-status = dict(zip(alphabet, [0]*26))
+letter_status = dict(zip(alphabet, [0]*26))
 
 
 ### Guessing begins
@@ -112,15 +112,15 @@ while (guess_cnt <= N_GUESS):
     for i in range(5):
         if guess[i] == answer[i]:
             check[i] = 1
-            status[guess[i]] = 1
+            letter_status[guess[i]] = 1
         else:
             if guess[i] in answer:
                 check[i] = 2
-                if status[guess[i]] != 1:
-                    status[guess[i]] = 2
+                if letter_status[guess[i]] != 1:
+                    letter_status[guess[i]] = 2
             else:
                 check[i] = 3
-                status[guess[i]] = 3
+                letter_status[guess[i]] = 3
 
     # append new guess
     check_book.append(check)
