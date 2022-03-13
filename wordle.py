@@ -18,20 +18,21 @@ class bcolors:
 
 ### Function to print keyboard
 def keyboard():
-    for l in alphabet:
-        if l == "A":
+
+    for letter in alphabet:
+        if letter == "A":
             print("\n", end= " ")
-        elif l == "Z":
+        elif letter == "Z":
             print("\n", end= "  ")
 
-        if (letter_status[l] == 0):
-            print(bcolors.WHITE + l ,end=" ")
-        elif (letter_status[l] == 1):
-            print(bcolors.GREEN + l ,end=" ")
-        elif (letter_status[l] == 2):
-            print(bcolors.YELLOW + l ,end=" ")
-        elif (letter_status[l] == 3):
-            print(bcolors.BLACK + l ,end=" ")
+        if (letter_status[letter] == 0):
+            print(bcolors.WHITE + letter ,end=" ")
+        elif (letter_status[letter] == 1):
+            print(bcolors.GREEN + letter ,end=" ")
+        elif (letter_status[letter] == 2):
+            print(bcolors.YELLOW + letter ,end=" ")
+        elif (letter_status[letter] == 3):
+            print(bcolors.BLACK + letter ,end=" ")
     print()
     print()
 
